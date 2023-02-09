@@ -8,7 +8,7 @@ using Mission6_cvzh7.Models;
 namespace Mission6_cvzh7.Migrations
 {
     [DbContext(typeof(MovieFormContext))]
-    [Migration("20230209050709_Initial")]
+    [Migration("20230209055453_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
