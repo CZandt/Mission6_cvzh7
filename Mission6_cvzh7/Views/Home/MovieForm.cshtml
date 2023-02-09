@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Movie Submission Form";
+}
+
+@model Mission6_cvzh7.Models.ApplicationResponse
+
+<h1>Submit a Movie</h1>
+
+<div>
+    <form method="post">
+        <label asp-for="Category">Category</label>
+        <input asp-for="Category" /> <br />
+
+        <label asp-for="Title">Title</label>
+        <input asp-for="Title" /> <br />
+
+        <label asp-for="Year">Year</label>
+        <input asp-for="Year" /> <br />
+
+        <label asp-for="Director">Director</label>
+        <input asp-for="Director" /> <br />
+
+        <label asp-for="Rating">Rating</label>
+        <select asp-for="Rating">
+            <option value="G">G</option>
+            <option value="PG">PG</option>
+            <option value="PG-13">PG-13</option>
+            <option value="R">R</option>
+        </select> <br />
+
+        <label asp-for="Edited">Edited</label>
+        <select asp-for="Edited">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select> <br />
+
+        <label asp-for="LentTo">Lent to</label>
+        <input asp-for="LentTo" /> <br />
+
+        <label asp-for="Notes">Notes</label>
+        <textarea asp-for="Notes"></textarea> <br />
+
+        <button type="submit">Submit Movie</button>
+
+
+    </form>
+
+</div>
