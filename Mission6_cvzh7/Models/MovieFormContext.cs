@@ -17,16 +17,24 @@ namespace Mission6_cvzh7.Models
 
         public DbSet<ApplicationResponse> responses { get; set; }
 
+        public DbSet<Category> Categories { get; set; }
+
         // Add the preset data to the movie database when it is built for the first time
 
         protected override void OnModelCreating(ModelBuilder mb)
         {
+            mb.Entity<Category>().HasData(
+                new Category { CategoryID = 1, CategoryName="Action/Adventure"},
+                new Category { CategoryID = 2, CategoryName= "Mystery/Thriller"},
+                new Category { CategoryID = 3, CategoryName="Comedy/Family"}
+
+                );
             mb.Entity<ApplicationResponse>().HasData(
 
                 new ApplicationResponse
                 {
                     MovieID = 1,
-                    Category = "Action/Adventure",
+                    CategoryID = 1,
                     Title = "Tenet",
                     Year = 2020,
                     Director = "Christopher Nolan",
@@ -37,7 +45,7 @@ namespace Mission6_cvzh7.Models
                 new ApplicationResponse
                 {
                     MovieID = 2,
-                    Category = "Mystery/Thriller",
+                    CategoryID = 2,
                     Title = "Knives Out",
                     Year = 2019,
                     Director = "Rian Johnson",
@@ -47,7 +55,7 @@ namespace Mission6_cvzh7.Models
                 new ApplicationResponse
                 {
                     MovieID = 3,
-                    Category = "Comedy/Family",
+                    CategoryID = 3,
                     Title = "Cars",
                     Year = 2006,
                     Director = "John Lasseter",

@@ -10,9 +10,19 @@
 <h1>Submit a Movie</h1>
 
 <div>
-    <form method="post">
-        <label asp-for="Category">Category</label>
-        <input asp-for="Category" /> <br />
+    <form method="post" >
+        <div asp-validation-summary="All"></div>
+
+        <label asp-for="CategoryID">Category</label>
+        <select asp-for="CategoryID">
+            <!--For loop creates the categories to select from in the drop down-->
+            <option value="">Select a Category</option>
+            @foreach(Category c in ViewBag.Categories)
+            {
+                <option value="@c.CategoryID">@c.CategoryName</option>
+            }
+
+        </select><br />
 
         <label asp-for="Title">Title</label>
         <input asp-for="Title" /> <br />
