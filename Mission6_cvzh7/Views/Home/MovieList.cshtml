@@ -10,6 +10,7 @@
 <table class="table table-bordered">
 
     <thead class="font-weight-bold">
+        <!--Creates the header for the table-->
         <tr>
             <td>Title</td>
             <td>Category</td>
@@ -23,6 +24,7 @@
     </thead>
 
     <tbody>
+        <!--Goes through each record that was passed from the database and adds its data to the table-->
         @foreach(var record in Model)
             {
                 <tr>

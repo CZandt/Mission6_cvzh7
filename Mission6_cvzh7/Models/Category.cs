@@ -12,5 +12,7 @@ namespace Mission6_cvzh7.Models
         [Required]
         public int CategoryID { get; set; }
         public string CategoryName { get; set; }
+
+        // Category table with categoryID as the PK
     }
 }

@@ -23,6 +23,7 @@ namespace Mission6_cvzh7.Models
 
         protected override void OnModelCreating(ModelBuilder mb)
         {
+            // Creates the categories that are pre determined in the database
             mb.Entity<Category>().HasData(
                 new Category { CategoryID = 1, CategoryName="Action/Adventure"},
                 new Category { CategoryID = 2, CategoryName= "Mystery/Thriller"},
@@ -30,7 +31,7 @@ namespace Mission6_cvzh7.Models
 
                 );
             mb.Entity<ApplicationResponse>().HasData(
-
+                // Creates the movie records that are pre loaded in the database
                 new ApplicationResponse
                 {
                     MovieID = 1,
